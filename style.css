@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+:root{
+    --primary: gray;
+    --secondary: white;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 200ms ease-in;
+}
+body{
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.left, .right{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.right{
+    width: 60%;
+    padding: 1em;
+}
+.left{
+    width: 40%;
+    background-image: url("tamara-bitter-dPeerxo8CBQ-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+}
+form > * {
+    padding: 1em;
+    margin: 1.5em;
+}
+fieldset{
+    border: none;
+}
+legend{
+    font-weight: bold;
+}
+label{
+    margin: 0.5em;
+}
+input{
+    border-style: solid;
+    border-color: var(--secondary);
+    border-radius: 10px;
+    height: 2em;
+    box-shadow: 15px 11px 20px -10px rgba(71, 71, 71, 0.58);
+    font-size: inherit;
+    font-family: inherit;
+}
+input:hover{
+    border-color: var(--primary);
+
+}
+
+.logoCont{
+    background-color: rgba(0,0, 0, 0.5);
+    color: var(--secondary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 20px 0 20px 0;
+}
+
+.logo{
+    width: 80px;
+}
+.inputFields{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.rightInput, .leftInput{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.credits{
+    font-size: .8rem;
+    font-weight: bold;
+    color: var(--secondary);
+    display: block;
+    position: absolute;
+    bottom: 20px;
+}
+a{
+    font-size: 1.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+}
+a::after{
+    content: "";
+    background-color: var(--primary);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 300ms ease-in;
+}
+a:hover::after{
+    transform: scaleX(1);
+
+}
+.btns{
+    margin: 2em;
+}
+button{
+    padding: 1em;
+    border-radius: 10px;
+    background-color: var(--primary);
+    border: solid 3px var(--primary);
+    color: var(--secondary);
+    font-size: 1.2rem;
+    margin-right: 1em;
+    position: relative;
+    bottom: 0;
+    box-shadow: 15px 11px 20px -10px rgba(71, 71, 71, 0.58);
+    cursor: pointer;
+}
+button:hover{
+    bottom: 5px;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+.error{
+    border-color: red;
+}
